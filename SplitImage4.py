@@ -10,16 +10,6 @@ import cv2
 
 import timeit
 
-
-# In[ ]:
-
-
-
-
-
-# In[178]:
-
-
 def chunkify4(img,figures):
     n_chunks = 4
     shape = img.shape
@@ -58,38 +48,10 @@ def chunkify4(img,figures):
     
     return chunks
 
+if __name__ = '__main__':
+    im1 = 'images/original_04.png'
 
-# In[179]:
+    # # load the two input images
+    imageA = cv2.imread(im1, cv2.IMREAD_GRAYSCALE)
 
-
-im1 = 'images/original_04.png'
-im2 = 'images/modified_04.png'
-
-# # load the two input images
-imageA = cv2.imread(im1, cv2.IMREAD_GRAYSCALE)
-imageB = cv2.imread(im2, cv2.IMREAD_GRAYSCALE)
-
-
-# In[181]:
-
-
-split_img = chunkify4(imageA,True)
-
-
-# In[174]:
-
-
-get_ipython().run_line_magic('timeit', '-n 50 -r 5 [chunkify4(imageA)]')
-
-
-# In[176]:
-
-
-get_ipython().run_line_magic('timeit', '-n 50 -r 5 [chunkify4(imageA)]')
-
-
-# In[ ]:
-
-
-
-
+    split_img = chunkify4(imageA,True)
