@@ -48,7 +48,7 @@ def chunkify4(img,figures):
     
     return chunks
 
-if __name__ = '__main__':
+if __name__ == '__main__':
     im1 = 'images/original_04.png'
 
     # # load the two input images
